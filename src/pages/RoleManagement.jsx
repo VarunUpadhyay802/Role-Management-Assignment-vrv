@@ -27,13 +27,13 @@ function RoleManagement() {
   return (
     <div
       className={`h-screen flex pt-16 overflow-auto justify-end w-full lg:w-5/6 ${
-        darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-50 text-gray-800"
+        darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
       }`}
     >
       <div className="flex-1 flex flex-col overflow-hidden">
         <header
-          className={`h-16 flex items-center px-6 justify-between shadow-md ${
-            darkMode ? "bg-gray-900 text-gray-200" : "bg-gray-100 text-gray-800"
+          className={`h-16 flex items-center px-6 justify-between shadow-lg ${
+            darkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-800"
           }`}
         >
           <h1 className="text-lg sm:text-xl md:text-xl font-semibold">
@@ -44,18 +44,18 @@ function RoleManagement() {
               onClick={() => setAddModalOpen(true)}
               className={`py-2 px-6 rounded-lg shadow-md transition flex items-center justify-center ${
                 darkMode
-                  ? "bg-indigo-600 text-gray-100 hover:bg-indigo-500"
-                  : "bg-indigo-600 text-gray-100 hover:bg-indigo-700"
+                  ? "bg-indigo-500 text-white hover:bg-indigo-400"
+                  : "bg-indigo-600 text-white hover:bg-indigo-500"
               }`}
             >
               <FaPlus className="inline" />
-              <span className="hidden lg:block">Add</span>
+              <span className="hidden lg:block ml-2">Add</span>
             </button>
           </div>
         </header>
         <main className="p-6 sm:p-8 flex-1 overflow-y-auto">
           <div
-            className={`shadow-sm rounded-lg overflow-hidden ${
+            className={`shadow-md rounded-lg overflow-hidden ${
               darkMode ? "bg-gray-800" : "bg-white"
             }`}
           >
@@ -78,12 +78,15 @@ function RoleManagement() {
                 </tr>
               </thead>
               <tbody>
-                {roles.length==0 ? (
+                {roles.length === 0 ? (
                   <tr>
-                  <td colSpan="4" className="text-center py-6 text-sm sm:text-base font-semibold text-gray-500">
-                    No Roles Available
-                  </td>
-                </tr>
+                    <td
+                      colSpan="3"
+                      className="text-center py-6 text-sm sm:text-base font-semibold text-gray-500"
+                    >
+                      No Roles Available
+                    </td>
+                  </tr>
                 ) : (
                   roles.map((role) => (
                     <tr
@@ -91,7 +94,7 @@ function RoleManagement() {
                       className={`transition duration-200 ${
                         darkMode
                           ? "hover:bg-gray-700 border-b border-gray-600"
-                          : "hover:bg-gray-50 border-b-4 border-gray-50"
+                          : "hover:bg-gray-50 border-b border-gray-200"
                       }`}
                     >
                       <td className="px-3 sm:px-6 py-4">{role.role}</td>
@@ -121,7 +124,6 @@ function RoleManagement() {
                     </tr>
                   ))
                 )}
-                
               </tbody>
             </table>
           </div>

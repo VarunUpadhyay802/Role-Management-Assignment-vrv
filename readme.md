@@ -44,7 +44,6 @@ This project is a **responsive and visually appealing UI/UX** application built 
 - **Recharts**: For creating visually appealing charts and graphs.
 
 ---
-
 ## How to Run the Project
 
 ### Prerequisites
