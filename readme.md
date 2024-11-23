@@ -49,3 +49,9 @@ This project is a **responsive and visually appealing UI/UX** application built 
 ### Prerequisites
 - Node.js installed on your system.
 
+
+### ScreenShots
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
